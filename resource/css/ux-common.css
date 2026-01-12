@@ -624,11 +624,12 @@ body.is-locked {
 .lists.num {
   counter-reset: num;
 }
+.lists.num li {
+  padding-left: 2rem;
+}
 .lists.num li:before {
   counter-increment: num;
   content: counter(num) ".";
-  position: relative;
-  margin-right: 0.4rem;
 }
 .lists.num.cir li:before {
   line-height: 1.6rem;

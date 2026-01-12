@@ -152,12 +152,10 @@ body.is-locked {
     }
     &.num{
         counter-reset: num;
-        li{ 
+        li{ padding-left: 2rem;
             &:before{
                 counter-increment: num;
                 content: counter(num) ".";
-				position: relative;
-				margin-right: 0.4rem;
             }
         }
         &.cir{

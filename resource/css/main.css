@@ -50,12 +50,12 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 1rem 0.4rem;
+  padding: 1.2rem 0.4rem;
 }
 .worship-list li + li {
   border-top: 1px solid #CCCCCC;
 }
-.worship-list span {
+.worship-list .tit {
   position: relative;
   display: inline-block;
   font-size: 1.8rem;
@@ -64,26 +64,69 @@
   letter-spacing: -0.025em;
 }
 @media (max-width: 1024px) {
-  .worship-list span {
+  .worship-list .tit {
     font-size: 1.7rem;
   }
 }
 @media (max-width: 798px) {
-  .worship-list span {
+  .worship-list .tit {
     font-size: 1.5rem;
   }
 }
-.worship-list span + span {
+.worship-list .name {
+  margin-left: auto;
   font-size: 1.6rem;
   font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.025em;
   color: #333333;
-}
-.worship-list span:first-of-type {
-  width: 14rem;
-}
-.worship-list span:last-of-type {
-  width: 14rem;
   text-align: right;
+}
+@media (max-width: 1024px) {
+  .worship-list .name {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 798px) {
+  .worship-list .name {
+    font-size: 1.4rem;
+  }
+}
+.worship-list .subject {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: -0.025em;
+}
+@media (max-width: 1024px) {
+  .worship-list .subject {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 798px) {
+  .worship-list .subject {
+    font-size: 1.5rem;
+  }
+}
+.worship-list div {
+  width: 60%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -ms-display: flexbox; /* IE10 */
+  display: -webkit-box; /* OLD iOS, Safari */ /* OLD Firefox */
+  display: -ms-flexbox; /* IE10 Tweener */ /* NEW Chrome */
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .notice-list li {

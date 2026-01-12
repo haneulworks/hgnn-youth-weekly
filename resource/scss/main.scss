@@ -14,14 +14,13 @@
 }
 
 .worship-list{
-	li{ position: relative; @include d-flex; @include align-center; @include justify-between; padding: 1rem 0.4rem;
+	li{ position: relative; @include d-flex; @include align-center; @include justify-between; padding: 1.2rem 0.4rem;
 		+ li{ border-top: 1px solid $color-gray-200;}
 	}
-	span{ position: relative; display: inline-block; @include text-style(depth1,500,1.6);
-		+ span{ font-size: 1.6rem; font-weight: 400; color: $color-gray-800;}
-		&:first-of-type{ width: 14rem;}
-		&:last-of-type{ width: 14rem; text-align: right;}
-	}
+	.tit{ position: relative; display: inline-block; @include text-style(depth1,500,1.6);}
+	.name{ margin-left: auto; @include caption-style(depth1,400,1.6); color: $color-gray-800; text-align: right;}
+	.subject{ @include text-style(depth1,500,1.6);}
+	div{ width: 60%; position: absolute; right: 0; top: 50%; transform: translateY(-50%); @include d-flex; @include align-center; @include justify-end; @include flex-wrap;}
 }
 
 .notice-list{
