@@ -1,3 +1,84 @@
+
+fetch('./data/weekly.json')
+  .then(res => res.json())
+  .then(data => {
+    const today = new Date();
+    const weeks = data.weeks;
+
+    // 날짜 내림차순 정렬 (최신이 맨 위)
+    weeks.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    // 오늘보다 작거나 같은 가장 최신 주 찾기
+    let current = weeks.find(w => new Date(w.date) <= today) || weeks[0];
+
+    renderMain(current);
+  });
+
+function format(dateStr) {
+  const d = new Date(dateStr);
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}.${m}.${day}`;
+}
+
+function renderMain(w) {
+  // 상단
+  document.getElementById('weekDate').textContent = format(w.date);
+  document.getElementById('sermonTitle').textContent = w.title;
+  document.getElementById('preacher').textContent = w.preacher;
+
+  // 말씀
+  document.getElementById('verseText').innerHTML =
+    w.verse.replace(/\n/g, '<br>');
+  document.getElementById('verseRef').textContent = w.bible;
+
+  // 예배 순서
+  renderOrder(w.order);
+
+  // 공지
+  renderNotice(w.notice);
+
+  // 다음주
+  renderNext(w.next);
+}
+
+function renderOrder(order) {
+  const ul = document.getElementById('orderList');
+  ul.innerHTML = '';
+
+  order.forEach(item => {
+    const li = document.createElement('li');
+    li.innerHTML = `${item.title} <span>${item.who}</span>`;
+    ul.appendChild(li);
+  });
+}
+
+function renderNotice(notice) {
+  const ul = document.getElementById('noticeList');
+  ul.innerHTML = '';
+
+  notice.forEach(text => {
+    const li = document.createElement('li');
+    li.textContent = text;
+    ul.appendChild(li);
+  });
+}
+
+function renderNext(next) {
+  document.getElementById('nextDate').textContent = format(next.date);
+
+  const grid = document.getElementById('nextList');
+  grid.innerHTML = '';
+
+  next.members.forEach(m => {
+    const div = document.createElement('div');
+    div.innerHTML = `<span>${m.role}</span>${m.name}`;
+    grid.appendChild(div);
+  });
+}
+
+
 document.addEventListener('DOMContentLoaded', function () {
 
   /* =====================

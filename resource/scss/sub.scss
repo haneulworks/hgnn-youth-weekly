@@ -19,23 +19,21 @@ h1{
 	margin-bottom:20px;
 }
 
-.list{
+.archive-list{
 	list-style:none;
 	padding:0;
-}
-
-.list li{
-	background:#fff;
-	border-radius:16px;
-	margin-bottom:12px;
-	padding:16px;
-	box-shadow:0 8px 20px rgba(0,0,0,.04);
-}
-
-.list a{
-	text-decoration:none;
-	color:#1f2937;
-	display:block;
+	li{
+		background:#fff;
+		border-radius:16px;
+		margin-bottom:12px;
+		padding:16px;
+		box-shadow:0 8px 20px rgba(0,0,0,.04);
+	}
+	a{
+		text-decoration:none;
+		color:#1f2937;
+		display:block;
+	}
 }
 
 .date{
