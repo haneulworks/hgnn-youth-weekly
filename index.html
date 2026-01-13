@@ -103,36 +103,32 @@
 
 </div>
 
-<script type="text/javascript">
-	// // 사용할 앱의 JavaScript 키를 설정해 주세요.
-	Kakao.init('5c8e276ac66a278e925960b664548016');
-	// // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
-	Kakao.Share.createDefaultButton({
-		container: '#kakao-link-btn',
+<script>
+Kakao.init('5c8e276ac66a278e925960b664548016');
+
+document.getElementById('kakao-link-btn').addEventListener('click', function () {
+	Kakao.Share.sendDefault({
 		objectType: 'feed',
 		content: {
 			title: '향기나는교회 청소년부 주보 · 이번 주 말씀',
 			description: '예수님의 사랑으로 함께 예배드리는 향기나는교회 청소년부 주보입니다.',
 			imageUrl: 'https://haneulworks.github.io/hgnn-youth-weekly/resource/img/visual.jpg',
-			imageWidth: 800,
-			imageHeight: 400,
 			link: {
 				mobileWebUrl: 'https://haneulworks.github.io/hgnn-youth-weekly/',
-				webUrl: 'https://haneulworks.github.io/hgnn-youth-weekly/',
+				webUrl: 'https://haneulworks.github.io/hgnn-youth-weekly/'
 			}
 		},
-
-				
 		buttons: [
-		{
-			title: '자세히 보기',
-			link: {
+			{
+				title: '자세히 보기',
+				link: {
 				mobileWebUrl: 'https://haneulworks.github.io/hgnn-youth-weekly/',
-				webUrl: 'https://haneulworks.github.io/hgnn-youth-weekly/',
-			},
-		},
+				webUrl: 'https://haneulworks.github.io/hgnn-youth-weekly/'
+				}
+			}
 		]
 	});
+});
 </script>
 
 </body>
