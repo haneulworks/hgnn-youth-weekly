@@ -24,7 +24,8 @@ fetch("../data/weekly.json")
     document.getElementById("preacher").textContent = week.preacher;
 
     // 말씀
-    document.getElementById("verseText").textContent = week.verse;
+    document.getElementById("verseText").innerHTML =
+  week.verse.replace(/\n/g, "<br>");
     document.getElementById("verseRef").textContent = week.bible;
 
     // 예배 순서
