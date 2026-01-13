@@ -12,6 +12,7 @@
 <meta property="og:description" content="예수님의 사랑으로 함께 예배드리는 향기나는교회 청소년부 주보입니다." />
 
 <!-- css -->
+<link rel="stylesheet" href="./resource/css/reset.css">
 <link rel="stylesheet" href="./resource/css/style.css">
 
 <!-- js -->
@@ -34,26 +35,37 @@
 
 	<!-- 이번주 말씀 -->
 	<section class="hero">
-		<p class="hero-label">이번 주 말씀</p>
+		<p class="hero-label">이번 주 설교</p>
 		<h1 class="hero-title">하나님의형상</h1>
-		<p class="hero-meta">창세기 1장 27절</p>
+		<p class="hero-preacher">윤수한 전도사님</p>
+	</section>
+
+	<section class="verse">
+		<p class="verse-label">오늘의 말씀</p>
+
+		<p class="verse-text">
+			하나님이 자기 형상 곧 하나님의 형상대로 사람을 창조하시되  
+			남자와 여자를 창조하시고
+		</p>
+
+		<p class="verse-ref">창세기 1장 27절</p>
 	</section>
 
 	<!-- 예배 순서 -->
 	<section class="card">
 		<h2>예배 순서</h2>
 		<ul class="flow">
-			<li>사도신경</li>
-			<li>경배와 찬양</li>
-			<li>기도 · 백경민 선생님</li>
-			<li>성경봉독 · 문채선 학생</li>
-			<li>설교 · 윤수한 전도사님</li>
-			<li>결단의 찬양 &middot; 기도</li>
-			<li>봉헌 · 김서진 학생</li>
-			<li>봉헌 기도 · 윤수한 전도사님</li>
-			<li>파송찬양</li>
-			<li>주기도문</li>
-			<li>청소년부 소식 · 문채선 학생</li>
+			<li>사도신경 <span>다같이</span></li>
+			<li>경배와 찬양 <span>다같이</span></li>
+			<li>기도 <span>백경민 선생님</span></li>
+			<li>성경봉독 <span>문채선 학생</span></li>
+			<li>설교 <span>윤수한 전도사님</span></li>
+			<li>결단의 찬양 &middot; 기도 <span>다같이</span></li>
+			<li>봉헌 <span>김서진 학생</span></li>
+			<li>봉헌 기도 <span>윤수한 전도사님</span></li>
+			<li>파송찬양 <span>다같이</span></li>
+			<li>주기도문 <span>다같이</span></li>
+			<li>청소년부 소식 <span>문채선 학생</span></li>
 	</ul>
 	</section>
 
@@ -90,7 +102,7 @@
 	<!-- START :: 주보 공유 -->
 	<div class="share-wrap btn-wrap txt1 keep-all-pretty">
 		<button type="button" id="kakaotalk-sharing-btn" class="btn btn-full"><img src="./resource/img/icon-kakao.png" alt="카카오톡 아이콘" />카카오톡으로 공유</button>
-		<button type="button" class="btn btn-full copyText" data-copy="https://haneulworks.github.io/hgnn-youth-weekly/"><img src="./resource/img/icon-link.png" alt="링크 아이콘" /> 온라인 주보 주소 복사하기</button>
+		<button type="button" class="btn btn-full copyText" data-copy="https://haneulworks.github.io/hgnn-youth-weekly/"><img src="./resource/img/icon-link.png" alt="링크 아이콘" /> 온라인 주보 링크 복사하기</button>
 	</div>
 	<!-- END :: 주보 공유 -->
 
@@ -109,7 +121,7 @@
 <script>
 	document.getElementById('kakaotalk-sharing-btn').addEventListener('click', function () {
 		Kakao.Share.sendCustom({
-			templateId: 127876,   // 숫자, 따옴표 X
+			templateId: 127876, // 숫자만 입력
 			templateArgs: {
 				FW: "향기나는교회 청소년부",
 				date: "2026.01.11"
