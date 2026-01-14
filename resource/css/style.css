@@ -63,8 +63,8 @@ section {
   background: #fff;
   -webkit-box-shadow: 0 0.8rem 2.4rem rgba(0, 0, 0, 0.04);
           box-shadow: 0 0.8rem 2.4rem rgba(0, 0, 0, 0.04);
-  background: linear-gradient(135deg, #ff8a3d, #ffd2a8);
-  color: #5a2a00;
+  background: linear-gradient(135deg, #FFE6C7, #FFB88C);
+  color: #5A2E00;
 }
 .hero-label {
   font-size: 1.3rem;
@@ -176,6 +176,74 @@ section {
   font-weight: 400;
   line-height: 1.6;
   letter-spacing: -0.025em;
+}
+
+/* 팝업 - 사도신경, 주기도문 */
+.pop-content {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 100;
+}
+.pop-content.active {
+  -ms-display: flexbox; /* IE10 */
+  display: -webkit-box; /* OLD iOS, Safari */ /* OLD Firefox */
+  display: -ms-flexbox; /* IE10 Tweener */ /* NEW Chrome */
+  display: flex;
+}
+.pop-box {
+  overflow-y: auto;
+  position: relative;
+  -ms-display: flexbox; /* IE10 */
+  display: -webkit-box; /* OLD iOS, Safari */ /* OLD Firefox */
+  display: -ms-flexbox; /* IE10 Tweener */ /* NEW Chrome */
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 42rem;
+  width: 90%;
+  max-height: 80vh;
+  padding: 2rem;
+  border-radius: 16px;
+  background: #fff;
+}
+.pop-box h3 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.pop-body {
+  overflow-y: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-top: 1.6rem;
+  padding-right: 0.5rem;
+  color: #333333;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: -0.025em;
+  line-height: 1.6;
+  word-break: keep-all;
+  text-wrap-style: pretty;
+}
+.pop-close {
+  position: absolute;
+  top: 1.6rem;
+  right: 2rem;
+  background: none;
+  font-size: 2.8rem;
+  border: none;
+  cursor: pointer;
 }
 
 /* 공지 */

@@ -74,6 +74,34 @@ function renderNext(next) {
   });
 }
 
+document.addEventListener('click', function(e){
+
+  // li 클릭 → 팝업 열기
+  const trigger = e.target.closest('.pop-trigger');
+  if(trigger && trigger.querySelector('.pop-content')){
+    const pop = trigger.querySelector('.pop-content');
+    pop.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  // 닫기 버튼
+  if(e.target.classList.contains('pop-close')){
+    closePop(e.target.closest('.pop-content'));
+  }
+
+  // 바깥 영역 클릭
+  if(e.target.classList.contains('pop-content')){
+    closePop(e.target);
+  }
+
+});
+
+function closePop(pop){
+  pop.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
 

@@ -45,27 +45,27 @@ body {
 /* h 태그들 원래 사이즈 복원 (브라우저 기본값 기준) */
 h1 {
   font-size: 2em;
-  font-weight: bold;
+  font-weight: 700;
 } /* 32px */
 h2 {
   font-size: 1.5em;
-  font-weight: bold;
+  font-weight: 600;
 } /* 24px */
 h3 {
   font-size: 1.17em;
-  font-weight: bold;
+  font-weight: 600;
 } /* 18.72px */
 h4 {
   font-size: 1em;
-  font-weight: bold;
+  font-weight: 600;
 } /* 16px */
 h5 {
   font-size: 0.83em;
-  font-weight: bold;
+  font-weight: 600;
 } /* 13.28px */
 h6 {
   font-size: 0.67em;
-  font-weight: bold;
+  font-weight: 500;
 } /* 10.72px */
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
