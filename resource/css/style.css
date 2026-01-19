@@ -170,6 +170,31 @@ section {
   line-height: 1.6;
   letter-spacing: -0.025em;
 }
+.flow .title {
+  -ms-display: flexbox; /* IE10 */
+  display: -webkit-box; /* OLD iOS, Safari */ /* OLD Firefox */
+  display: -ms-flexbox; /* IE10 Tweener */ /* NEW Chrome */
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.8rem;
+}
+.flow .title i {
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  font-size: 0;
+  background-color: #545456;
+  mask-image: url("../img/icon-file.svg");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  -webkit-mask-image: url("../img/icon-file.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+}
 .flow .who {
   color: #545456;
   font-size: 1.3rem;

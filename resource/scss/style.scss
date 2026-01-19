@@ -40,6 +40,22 @@ section{ margin: 0 1.6rem; margin-top: 2.4rem;}
 /* 예배 순서 */
 .flow{ @include d-grid(1.2rem);
 	li{ @include d-flex; @include justify-between; padding: 1.4rem 1.2rem; background: $color-blue-bg-10; border-radius: 0.8rem; @include caption-style(depth1,400,1.6);}
+	.title{ @include d-flex; @include align-center; gap: 0.8rem;
+		i{ display: inline-block; width: 1.6rem; height: 1.6rem; font-size: 0;
+		// 아이콘 색상
+        background-color: $color-gray-600;
+
+        // 아이콘 SVG를 마스크로 사용
+        mask-image: url('../img/icon-file.svg');
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        mask-position: center;
+
+        -webkit-mask-image: url('../img/icon-file.svg');
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        -webkit-mask-position: center;}
+	}
 	.who{ color: $color-gray-600; @include caption-style(depth2,400,1.6);}
 }
 
