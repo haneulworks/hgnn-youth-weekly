@@ -58,7 +58,7 @@ section{ margin: 0 1.6rem; margin-top: 2.4rem;}
 
 /* 공지 */
 .notice{
-	li{ padding: 1rem 0.4rem; border-bottom: 1px solid $color-gray-line; @include caption-style(depth1,400,1.6); word-break: keep-all; text-wrap-style: pretty;
+	li{ @include d-flex; @include align-center; min-height: 4.4rem; padding: 1rem 0.4rem; border-bottom: 1px solid $color-gray-line; @include caption-style(depth1,400,1.6); word-break: keep-all; text-wrap-style: pretty;
 		&:last-child{ border-bottom: none;}
 	}
 }

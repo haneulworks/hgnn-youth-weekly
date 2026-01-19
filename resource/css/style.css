@@ -252,6 +252,14 @@ section {
 
 /* 공지 */
 .notice li {
+  -ms-display: flexbox; /* IE10 */
+  display: -webkit-box; /* OLD iOS, Safari */ /* OLD Firefox */
+  display: -ms-flexbox; /* IE10 Tweener */ /* NEW Chrome */
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 4.4rem;
   padding: 1rem 0.4rem;
   border-bottom: 1px solid #DDDDDD;
   font-size: 1.4rem;
